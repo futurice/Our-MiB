@@ -93,48 +93,6 @@ registrationForm t model errorMessage =
                         [ H.text <| t "registration.joinLink" ]
                     , H.text "."
                     ]
-                , H.h3
-                    [ A.class "registration__input" ]
-                    [ H.input
-                        [ A.name "email"
-                        , A.type_ "email"
-                        , A.autofocus True
-                        , A.placeholder <|
-                            t "registration.emailPlaceholder"
-                        , onInput Email
-                        ]
-                        []
-                    ]
-                , H.div
-                    [ A.class "registration__consent" ]
-                    [ H.input
-                        [ A.type_ "checkbox"
-                        , A.class "registration__consent-checkbox"
-                        , onClick ToggleConsent
-                        ]
-                        []
-                    , H.div [ A.class "registration__consent-text" ]
-                        [ H.text (t "registration.consentText")
-                        , H.a
-                            [ A.href <| t "registration.consentLink", A.target "_blank" ]
-                            [ H.text <| t "registration.consentLink" ]
-                        ]
-                    ]
-                , errorMessage
-                    |> Maybe.map
-                        (\message ->
-                            H.p [ A.class "registration__error" ] [ H.text message ]
-                        )
-                    |> Maybe.withDefault (H.text "")
-                , H.p
-                    [ A.class "registration__submit-button" ]
-                    [ H.button
-                        [ A.type_ "submit"
-                        , A.class "btn btn-primary"
-                        , A.disabled (String.length model.email == 0 || not model.consent)
-                        ]
-                        [ H.text <| t "registration.buttonText" ]
-                    ]
                 ]
             ]
         ]

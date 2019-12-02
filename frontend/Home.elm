@@ -107,13 +107,7 @@ introBoxes t loggedInUserMaybe =
                     []
 
                 Nothing ->
-                    [ H.div
-                        [ A.class "home__introbox home__introbox--button-container col-xs-11 col-sm-4 col-sm-offset-4" ]
-                        [ Link.button (t "home.introbox.register")
-                            "home__introbox--button btn btn-primary"
-                            Nav.Registration
-                        ]
-                    ]
+                    []
     in
     [ H.div
         [ A.class "home__introbox col-xs-11 col-sm-6 col-sm-offset-3" ]
@@ -125,7 +119,10 @@ introBoxes t loggedInUserMaybe =
         [ A.class "home__introbox col-xs-11 col-sm-6 col-sm-offset-3" ]
         [ H.div
             [ A.class "home__introbox--content" ]
-            [ H.text (t "home.introbox.content") ]
+                [
+                    H.p []
+                        [ H.text <| t "home.introbox.content" ]
+                ]
         ]
     ]
         ++ createProfile

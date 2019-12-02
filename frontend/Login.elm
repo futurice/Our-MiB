@@ -83,55 +83,7 @@ loginForm t model errorMessage =
                     [ A.class "login__heading" ]
                     [ H.text <| t "login.title" ]
                 , H.p [] [ H.text <| t "login.hint" ]
-                , H.h3
-                    [ A.class "login__input" ]
-                    [ H.input
-                        [ A.name "email"
-                        , A.type_ "email"
-                        , A.autofocus True
-                        , A.placeholder <|
-                            t "login.emailPlaceholder"
-                        , onInput Email
-                        ]
-                        []
-                    ]
-                , H.h3
-                    [ A.class "login__input" ]
-                    [ H.input
-                        [ A.name "password"
-                        , A.type_ "password"
-                        , A.placeholder <|
-                            t "login.passwordPlaceholder"
-                        , onInput Password
-                        ]
-                        []
-                    ]
-                , errorMessage
-                    |> Maybe.map
-                        (\message ->
-                            H.p [ A.class "login__error" ] [ H.text message ]
-                        )
-                    |> Maybe.withDefault (H.text "")
-                , H.p
-                    [ A.class "login__submit-button" ]
-                    [ H.button
-                        [ A.type_ "submit"
-                        , A.class "btn btn-primary"
-                        , A.disabled
-                            ((String.length model.email == 0)
-                                || (String.length model.password == 0)
-                            )
-                        ]
-                        [ H.text <| t "common.login" ]
-                    ]
                 ]
-            ]
-        , H.div [ A.class "login__renew col-xs-11 col-sm-4 col-sm-offset-4" ]
-            [ H.button
-                [ onClick PasswordForgotten
-                , A.class "login__renew--button btn btn-primary"
-                ]
-                [ H.text <| t "login.renewButton" ]
             ]
         ]
 

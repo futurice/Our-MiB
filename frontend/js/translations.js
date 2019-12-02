@@ -143,7 +143,7 @@ const source = {
       heading: 'Löydä mibiläinen',
       // createProfile: 'Luo oma profiili',
       register: 'Rekisteröidy',
-      content: 'MiBiT on mibiläisten oma kohtaamispaikka, jossa yhdistyvät inspiroivat kohtaamiset, vertaistuki ja itsensä kehittäminen. Voit löytää etsimäsi mibiläisen tai tulla itse löydetyksi juuri sinunkaltaistasi henkilöä etsivälle.',
+      content: 'MiBiT on poistettu käytöstä. Kiitos teille, jotka olette palvelua käyttäneet! Mikäli sinulla on kysyttävää tiedoista tai profiilin poistamisesta, voit kysyä lisää osoitteesta info@mib.fi',
     },
     tradenomiittiInfo: {
       // \xad === &shy;, that is soft hyphen
@@ -196,12 +196,12 @@ const source = {
   },
   loginNeeded: {
     heading: 'Kirjaudu sisään',
-    info: 'MiBiT on ainutlaatuinen kohtaamispaikka Mothers in Business MiB ry:n jäsenille. Kirjaudu sisään, niin voit osallistua! Jos olet uusi käyttäjä, rekisteröidy ensin.',
+    info: 'MiBiT on poistettu käytöstä. Kiitos teille, jotka olette palvelua käyttäneet!',
     registerButton: 'Rekisteröidy',
   },
   login: {
     title: 'Kirjaudu sisään',
-    hint: 'Kirjaudu sisään MiB ry:n jäsenrekisteriin ilmoittamallasi sähköpostiosoitteella.',
+    hint: 'MiBiT on poistettu käytöstä. Kiitos teille, jotka olette palvelua käyttäneet!',
     emailPlaceholder: 'Sähköpostiosoite',
     passwordPlaceholder: 'Salasana',
     failure: 'Kirjautuminen epäonnistui. Varmista, että kirjoitit sähköpostiosoitteesi ja salasanasi oikein.',
@@ -369,7 +369,7 @@ const source = {
   },
   registration: {
     title: 'Rekisteröidy käyttäjäksi',
-    text: 'MiBiT on Mothers in Business MiB ry:n jäsenten kohtaamispaikka. Voit rekisteröityä MiBiTin käyttäjäksi MiB ry:n jäsenrekisteriin ilmoittamallasi sähköpostiosoitteella. Jos et ole vielä MiB ry:n jäsen, voit ',
+    text: 'MiBiT on poistettu käytöstä. Kiitos teille, jotka olette palvelua käyttäneet! MiB ry:hyn voit ',
     joinLink: 'liittyä tästä',
     joinUrl: 'http://www.mothersinbusiness.fi/jaseneksi/',
     emailPlaceholder: 'Sähköpostiosoite',
